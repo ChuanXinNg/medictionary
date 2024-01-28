@@ -78,8 +78,7 @@ export function ComboboxDemo() {
                 <CommandItem
                   key={framework.term}
                   value={framework.term}
-                  onSelect={handleSelect}
-                >
+                  onSelect={handleSelect} item={framework}>
                   <Check
                     className={cn(
                       "mr-2 h-4 w-4",
