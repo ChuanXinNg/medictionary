@@ -8,9 +8,9 @@ export default function Home() {
   return (
     
     <main>
-      <h1>Medictionary</h1>
+      <div id="title"><h1>Medictionary</h1></div>
       <div className="search-wrapper">
-        <MyForm/>
+        {/* <MyForm/> */}
         <ComboboxDemo/>
       </div>
       

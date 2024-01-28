@@ -14,7 +14,7 @@ const MyForm = () => {
 
   const renderMessageContent = () => {
 
-    
+
 
     return (
       // Return medical term details and explanation
@@ -38,7 +38,6 @@ const MyForm = () => {
                 height: 50,
                 display: "block",
                 margin: "auto"
-
             }
         }
       />

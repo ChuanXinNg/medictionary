@@ -81,7 +81,7 @@
     src: local('Drukaatie burti'), url('https://fonts.cdnfonts.com/s/31918/DrukaatieBurti-Regular.woff') format('woff');
   }
   h1 {
-    font-size: 100px;
+    font-size: 50px;
     align-items: center;
     text-align: center;
     font-family : 'Drukaatie burti';

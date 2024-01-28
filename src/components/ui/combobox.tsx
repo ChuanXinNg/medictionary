@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { Check, ChevronsUpDown } from "lucide-react"
+import { Check, ChevronsUpDown, Divide } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
@@ -48,7 +48,7 @@ export function ComboboxDemo() {
   };
 
   return (
-    <div>
+    <div style={{margin: "0 auto", width: "100%", alignItems: "center"}}>
       <Popover open={open} onOpenChange={setOpen}>
         <PopoverTrigger asChild>
           <Button
@@ -56,6 +56,7 @@ export function ComboboxDemo() {
             role="combobox"
             aria-expanded={open}
             className="w-[200px] justify-between"
+            style={{overflowX: "scroll", margin: "0 auto", display: "block"}}
           >
             {term
               ? term.term
@@ -73,7 +74,7 @@ export function ComboboxDemo() {
               }}
             />
             <CommandEmpty>No framework found.</CommandEmpty>
-            <CommandGroup>
+            <CommandGroup  style={{overflowY: "scroll", maxHeight: "300px" }}>
               {searchResults.map((framework) => (
                 <CommandItem
                   key={framework.term}
@@ -96,12 +97,15 @@ export function ComboboxDemo() {
 
       {/* Display the selected value */}
       {/* <p>You selected: {selectedValue}</p> */}
-      {<p>Category: {term?.category}</p>}
-      {<p>Term: {term?.term}</p>}
-      {<p>Definition: {term?.definition}</p>}
-      {<p>Layman Terms: {term?.laymanTerm}</p>}
-      {<p>Normal Range: {term?.normalRange}</p>}
-      {<p>Details: {term?.details}</p>}
+      {<div style={{backgroundColor: "rgb(251, 255, 219)", margin: "0 5%", padding: "15px", display: "block", borderRadius: "20px", border: "solid 0.5px"}}>
+        <p>Category: {term?.category}</p><br />
+        <p>Term: {term?.term}</p><br />
+        <p>Definition: {term?.definition}</p><br />
+        <p>Layman Terms: {term?.laymanTerm}</p><br />
+        <p>Normal Range: {term?.normalRange}</p><br />
+        <p>Details: {term?.details}</p>
+      </div>}
+
     </div>
   );
 }
