@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -72,5 +72,18 @@
   }
   body {
     @apply bg-background text-foreground;
+    background-image: url("./img/background.jpg");
+  }
+  @font-face {
+    font-family: 'Drukaatie burti';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Drukaatie burti'), url('https://fonts.cdnfonts.com/s/31918/DrukaatieBurti-Regular.woff') format('woff');
+  }
+  h1 {
+    font-size: 100px;
+    align-items: center;
+    text-align: center;
+    font-family : 'Drukaatie burti';
   }
 }
