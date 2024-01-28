@@ -1,6 +1,8 @@
 "use client"
 import { Button } from "@/components/ui/button"
 import { ComboboxDemo } from "@/components/ui/combobox";
+import MedicalTermsSelector from "@/components/medicalCard";
+import MyForm from "@/components/ui/myform";
 
 export default function Home() {
   return (
@@ -8,6 +10,8 @@ export default function Home() {
       <div>
         <Button onClick={() => {console.log("Hello World!!")}}>Button</Button>
         <ComboboxDemo/>
+        <MyForm/>
+        
       </div>
 
       

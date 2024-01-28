@@ -2,84 +2,65 @@
 
 export const frameworks = [
     {
-      value: "Diagnosis",
-      label: "hematocrit",
+      value: "Hematocrit",
     },
     {
-      value: "Symptoms",
-      label: "inflammation",
+      value: "Inflammation",
     },
     {
-      value: "Diagnosis",
-      label: "ecg",
+      value: "ECG (Electrocardiogram)",
     },
     {
-      value: "Disease",
-      label: "hyperlipidemia",
+      value: "Hyperlipidemia",
     },
     {
-      value: "Disease",
-      label: "hypertension",
+      value: "Hypertension",
     },
     {
-      value: "Disease",
-      label: "hypoglycemia",
+      value: "Hypoglycemia",
     },
     {
-      value: "Drug",
-      label: "ibuprofen",
+      value: "Ibuprofen",
     },
     {
-      value: "Disease",
-      label: "cerebralEdema",
+      value: "Cerebral edema",
     },
     {
-      value: "Disease",
-      label: "arthritis",
+      value: "Arthritis",
     },
     {
-      value: "Disease",
-      label: "dermatitis",
+      value: "Dermatitis",
     },
     {
-      value: "Drug",
-      label: "warfarin",
+      value: "Warfarin",
     },
     {
-      value: "Disease",
-      label: "laryngitis",
+      value: "Laryngitis",
     },
     {
-      value: "Disease",
-      label: "leukaemia",
+      value: "Leukaemia",
     },
     {
-      value: "Metabolism",
-      label: "creatinine",
+      value: "Creatinine",
     },
     {
-      value: "Disease",
-      label: "obesity",
+      value: "Obesity",
     },
     {
-      value: "Disease",
-      label: "parasitosis",
+      value: "Parasitosis",
     },
     {
-      value: "Disease",
-      label: "seizure",
+      value: "Seizure",
     },
     {
-      value: "Disease",
-      label: "fracture",
+      value: "Fracture",
     },
     {
-      value: "Drugs",
-      label: "tamoxifen",
+      value: "Tamoxifen",
     },
     {
-      value: "Diagnose",
-      label: "leukocyteCount",
+      value: "Leukocyte Count / White blood cell count (WBC)",
     },
   ];
+  
   
