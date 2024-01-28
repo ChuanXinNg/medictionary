@@ -18,13 +18,14 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover"
 
-import { MedicalTerms } from "../../app/data"
+import { MedicalTerm, MedicalTerms } from "../../app/data"
 
 export function ComboboxDemo() {
   const [open, setOpen] = React.useState(false);
   const [value, setValue] = React.useState("");
   const [selectedValue, setSelectedValue] = React.useState("");
   const [searchResults, setSearchResults] = React.useState(MedicalTerms);
+  const [term, setTerm] = React.useState<MedicalTerm | null>(null);
 
   const handleSearch = (searchValue: string) => {
     const filteredFrameworks = MedicalTerms.filter((framework) =>
@@ -37,6 +38,13 @@ export function ComboboxDemo() {
     setValue(currentValue === value ? "" : currentValue);
     setOpen(false);
     setSelectedValue(currentValue);
+    let key = currentValue;
+    console.log("Selected key: " + key)
+    MedicalTerms.forEach((medicalterm) => {
+      if (medicalterm.term.toLowerCase() == key) {
+        setTerm(medicalterm);
+      }
+    });
   };
 
   return (
@@ -49,9 +57,9 @@ export function ComboboxDemo() {
             aria-expanded={open}
             className="w-[200px] justify-between"
           >
-            {value
-              ? MedicalTerms.find((framework) => framework.term === value)?.term
-              : "Select framework..."}
+            {term
+              ? term.term
+              : "Select Medical Term"}
             <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
           </Button>
         </PopoverTrigger>
@@ -69,10 +77,7 @@ export function ComboboxDemo() {
               {searchResults.map((framework) => (
                 <CommandItem
                   key={framework.term}
-                  value={
-                    `Category: ${framework.category}\n`
-                    + `Definition: ${framework.definition}\n`
-                  }
+                  value={framework.term}
                   onSelect={handleSelect}
                 >
                   <Check
@@ -90,7 +95,13 @@ export function ComboboxDemo() {
       </Popover>
 
       {/* Display the selected value */}
-      <p>You selected: {selectedValue}</p>
+      {/* <p>You selected: {selectedValue}</p> */}
+      {<p>Category: {term?.category}</p>}
+      {<p>Term: {term?.term}</p>}
+      {<p>Definition: {term?.definition}</p>}
+      {<p>Layman Terms: {term?.laymanTerm}</p>}
+      {<p>Normal Range: {term?.normalRange}</p>}
+      {<p>Details: {term?.details}</p>}
     </div>
   );
 }
